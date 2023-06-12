@@ -45,13 +45,13 @@ with tab1 :
         st.markdown(justify_text, unsafe_allow_html=True)
         st.markdown(f'<div class="text-justify">{opening_1}</div>', unsafe_allow_html=True)
     with col1_2 :
-        man_city_img = Image.open('D:\GitHub\Streamlit-Premier-League\man-city.jpeg')
+        man_city_img = Image.open('D:\\GitHub\\Streamlit-Premier-League\\man-city.jpeg')
         st.image(man_city_img, caption='Man City Players Lifting PL Trophy',  use_column_width=True)
     
     # Opening2 (Posisi ke-5,6,7, dan West Ham)
     col2_1, col2_2 = st.columns([1,3])
     with col2_1 : 
-        west_ham_img = Image.open('D:\GitHub\Streamlit-Premier-League\Streamlit\west-ham-conf-league.jpeg')
+        west_ham_img = Image.open('D:\\GitHub\\Streamlit-Premier-League\\west-ham-conf-league.jpeg')
         st.image(west_ham_img, caption='Declan Rice with Conference League Trophy', use_column_width=True)
     with col2_2 : 
         st.markdown(justify_text, unsafe_allow_html=True)
@@ -63,7 +63,7 @@ with tab1 :
         st.markdown(justify_text, unsafe_allow_html=True)
         st.markdown(f'<div class="text-justify">{opening_3}</div>', unsafe_allow_html=True)
     with col3_2 :
-        lei_city_img = Image.open('D:\GitHub\Streamlit-Premier-League\Streamlit\lei-relegated.jpg')
+        lei_city_img = Image.open('D:\\GitHub\\Streamlit-Premier-League\\lei-relegated.jpg')
         st.image(lei_city_img, caption='Leicester City players after getting relegated', use_column_width=True)
     
     # Center the content
@@ -71,8 +71,8 @@ with tab1 :
     st.write('____________')
 
     # Membaca file CSV
-    data = pd.read_csv('D:\GitHub\Streamlit-Premier-League\Streamlit\Position per Gameweek.csv')
-    pl_standings = pd.read_csv('D:\GitHub\Streamlit-Premier-League\Streamlit\PL 22-23 Standings.csv', index_col=0)
+    data = pd.read_csv('D:\\GitHub\\Streamlit-Premier-League\\Position per Gameweek.csv')
+    pl_standings = pd.read_csv('D:\\GitHub\\Streamlit-Premier-League\\PL 22-23 Standings.csv', index_col=0)
 
     st.header('Final Standings')
     # Membuat fungsi untuk memberikan warna pada baris
@@ -113,9 +113,6 @@ with tab1 :
     # col1, col2 = st.columns([5, 2])
     st.write('________________')
     st.header('Performance Chart')
-
-    # Import from tes.py file
-    desc = t.deskripsi
 
     # ====================================================== #
     with st.container() : 
@@ -180,14 +177,14 @@ with tab2 :
     st.header("Top Clean Sheet")
     col_cleansheet, col_cleansheet_img = st.columns([2,1])
 
-    df_top_assist = pd.read_csv('D:\GitHub\Streamlit-Premier-League\Streamlit\Top Asissts.csv', index_col=0)
-    df_top_cleansheet = pd.read_csv('D:\GitHub\Streamlit-Premier-League\Streamlit\Top Clean Sheet.csv', index_col=0)
-    df_top_scorer = pd.read_csv('D:\GitHub\Streamlit-Premier-League\Streamlit\Top Scorers.csv', index_col=0)
+    df_top_assist = pd.read_csv('D:\\GitHub\\Streamlit-Premier-League\\Top Asissts.csv', index_col=0)
+    df_top_cleansheet = pd.read_csv('D:\\GitHub\\Streamlit-Premier-League\\Top Clean Sheet.csv', index_col=0)
+    df_top_scorer = pd.read_csv('D:\\GitHub\\Streamlit-Premier-League\\Top Scorers.csv', index_col=0)
 
     # Players Image
-    golden_boot_img = Image.open('D:\GitHub\Streamlit-Premier-League\Streamlit\golden-boot.jpg')
-    golden_glove_img = Image.open('D:\GitHub\Streamlit-Premier-League\Streamlit\golden-glove.jpg')
-    pots_img = Image.open('D:\GitHub\Streamlit-Premier-League\Streamlit\playmaker-of-the-season.jpg')
+    golden_boot_img = Image.open('D:\\GitHub\\Streamlit-Premier-League\\golden-boot.jpg')
+    golden_glove_img = Image.open('D:\\GitHub\\Streamlit-Premier-League\\golden-glove.jpg')
+    pots_img = Image.open('D:\\GitHub\\Streamlit-Premier-League\\playmaker-of-the-season.jpg')
 
     # Polygon Plotting 
     def normalize_log(data):
@@ -255,7 +252,7 @@ with tab2 :
         with col_assist_img : 
             st.image(pots_img, caption='Kevin de Bruyne', use_column_width=True)
             with st.expander('Player Stats') :
-                feature_names = ['Passes', 'Passes\nper match', 'Big chances created', 'Cross accuracy (%)', 'Through balls', 'Accurate long balls']  # Nama-nama fitur
+                feature_names = ['Passes', 'Passes\\nper match', 'Big chances created', 'Cross accuracy (%)', 'Through balls', 'Accurate long balls']  # Nama-nama fitur
                 feature_values = [1357, 42.41, 31, 29, 28, 81]  # Nilai fitur pada setiap sisi poligon
                 selected_features = st.multiselect('Pilih Fitur', feature_names, default=feature_names)
                 selected_indices = [feature_names.index(feature) for feature in selected_features]
@@ -332,7 +329,7 @@ with tab3 :
     st.subheader('Attack Attributes')
     
     # Membaca file 'attack.csv' menggunakan pd.read_csv()
-    attack_file_path = r'D:\GitHub\Streamlit-Premier-League\Streamlit\attack.csv'
+    attack_file_path = r'D:\\GitHub\\Streamlit-Premier-League\\attack.csv'
     df_attack = pd.read_csv(attack_file_path)
     df_attack = df_attack.drop('Goals Free Kick', axis=1)
 
@@ -354,7 +351,7 @@ with tab3 :
         if len(clubs_data) > 0:
             plot_club_polygon_with_feature_values(clubs_data)
                 
-    defence_file_path = r'D:\GitHub\Streamlit-Premier-League\Streamlit\defence.csv'
+    defence_file_path = r'D:\\GitHub\\Streamlit-Premier-League\\defence.csv'
     df_defence = pd.read_csv(defence_file_path)
 
     st.write('_____')
@@ -378,7 +375,7 @@ with tab3 :
         if len(clubs_data) > 0:
             plot_club_polygon_with_feature_values(clubs_data)
             
-    teamplay_file_path = r'D:\GitHub\Streamlit-Premier-League\Streamlit\team_play.csv'
+    teamplay_file_path = r'D:\\GitHub\\Streamlit-Premier-League\\team_play.csv'
     df_teamplay = pd.read_csv(teamplay_file_path)
 
     st.write('_____')
