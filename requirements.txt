@@ -9,3 +9,4 @@ scikit-learn
 pickles
 Image
 lorem_text
+PIL
