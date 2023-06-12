@@ -1,0 +1,11 @@
+pandas
+streamlit
+altair
+matplotlib
+numpy
+plotly
+joblib
+sklearn
+pickle
+Image
+lorem
