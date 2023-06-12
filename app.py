@@ -11,6 +11,7 @@ import sklearn
 import pickle
 from PIL import Image
 from lorem_text import lorem
+import os
 
 st.set_page_config(
     page_title="Premier League 2022/23",
@@ -38,6 +39,9 @@ with tab1 :
     }
     </style>
     """
+    
+
+    
     st.header('Premier League 2022/23 Overview')
     # Opening (Pemenangnya siapa, kedua, ketiga, keempat)
     col1_1, col1_2 = st.columns([3,1])
@@ -46,8 +50,18 @@ with tab1 :
         st.markdown(f'<div class="text-justify">{opening_1}</div>', unsafe_allow_html=True)
     with col1_2 :
         man_city_img = Image.open('D:/GitHub/Streamlit-Premier-League/man-city.jpeg')
-        st.image(man_city_img, caption='Man City Players Lifting PL Trophy',  use_column_width=True)
-    
+        # Get the base path of the current script
+        base_path = os.path.dirname(os.path.abspath('D:/GitHub/Streamlit-Premier-League/'))
+
+        # Construct the image file path
+        image_path = os.path.join(base_path, 'man-city.jpeg')
+
+        # Open the image
+        man_city_img = Image.open(image_path)
+
+        # Display the image
+        st.image(man_city_img, caption='Manchester City')    
+        
     # Opening2 (Posisi ke-5,6,7, dan West Ham)
     col2_1, col2_2 = st.columns([1,3])
     with col2_1 : 
