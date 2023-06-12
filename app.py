@@ -1,7 +1,6 @@
 import pandas as pd
 import streamlit as st
 import altair as alt
-import tes as t
 import matplotlib.pyplot as plt
 import numpy as np
 import plotly.graph_objects as go
@@ -12,12 +11,6 @@ import sklearn
 import pickle
 from PIL import Image
 from lorem_text import lorem
-# from prediction import predict
-
-from keras.models import load_model
-# from tensorflow import keras
-
-# import sklearn
 
 st.set_page_config(
     page_title="Premier League 2022/23",
