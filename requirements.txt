@@ -6,6 +6,6 @@ numpy
 plotly
 joblib
 scikit-learn
-pickle
+pickles
 Image
 lorem
