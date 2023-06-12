@@ -1,0 +1,272 @@
+Rank,Player,Club,Nationality,Stat
+1,   Kevin De Bruyne ,     Manchester City    ,    Belgium   ,16
+2,   Mohamed Salah ,     Liverpool    ,    Egypt   ,12
+2,   Leandro Trossard ,     Arsenal    ,    Belgium   ,12
+4,   Michael Olise ,     Crystal Palace    ,    France   ,11
+4,   Bukayo Saka ,     Arsenal    ,    England   ,11
+6,   Riyad Mahrez ,     Manchester City    ,    Algeria   ,10
+7,   Trent Alexander-Arnold ,     Liverpool    ,    England   ,9
+7,   James Maddison ,     Leicester City    ,    England   ,9
+9,   Bruno Fernandes ,     Manchester United    ,    Portugal   ,8
+9,   Christian Eriksen ,     Manchester United    ,    Denmark   ,8
+9,   Morgan Gibbs-White ,     Nottingham Forest    ,    England   ,8
+9,   Pascal Groß ,     Brighton & Hove Albion    ,    Germany   ,8
+9,   Erling Haaland ,     Manchester City    ,    Norway   ,8
+9,   Bryan Mbeumo ,     Brentford    ,    Cameroon   ,8
+9,   Ivan Perisic ,     Tottenham Hotspur    ,    Croatia   ,8
+9,   Andrew Robertson ,     Liverpool    ,    Scotland   ,8
+17,   Jack Grealish ,     Manchester City    ,    England   ,7
+17,   Jack Harrison ,     Leeds United    ,    England   ,7
+17,   Alex Iwobi ,     Everton    ,    Nigeria   ,7
+17,   Dejan Kulusevski ,     Tottenham Hotspur    ,    Sweden   ,7
+17,   Solly March ,     Brighton & Hove Albion    ,    England   ,7
+17,   Jacob Ramsey ,     Aston Villa    ,    England   ,7
+17,   Dominic Solanke ,     Bournemouth    ,    England   ,7
+17,   Kieran Trippier ,     Newcastle United    ,    England   ,7
+17,   Granit Xhaka ,     Arsenal    ,    Switzerland   ,7
+17,   Martin Ødegaard ,     Arsenal    ,    Norway   ,7
+27,   Gabriel Jesus ,     Arsenal    ,    Brazil   ,6
+27,   Rodri ,     Manchester City    ,    Spain   ,6
+27,   Andreas Pereira ,     Fulham    ,    Brazil   ,6
+27,   Mathias Jensen ,     Brentford    ,    Denmark   ,6
+27,   Douglas Luiz ,     Aston Villa    ,    Brazil   ,6
+27,   Son Heung-Min ,     Tottenham Hotspur    ,    South Korea   ,6
+27,   Ollie Watkins ,     Aston Villa    ,    England   ,6
+27,   Joe Willock ,     Newcastle United    ,    England   ,6
+35,   Willian ,     Fulham    ,    Brazil   ,5
+35,   Jarrod Bowen ,     West Ham United    ,    England   ,5
+35,   Pervis Estupiñán ,     Brighton & Hove Albion    ,    Ecuador   ,5
+35,   Phil Foden ,     Manchester City    ,    England   ,5
+35,   Bruno Guimarães ,     Newcastle United    ,    Brazil   ,5
+35,   Pierre-Emile Højbjerg ,     Tottenham Hotspur    ,    Denmark   ,5
+35,   Kelechi Iheanacho ,     Leicester City    ,    Nigeria   ,5
+35,   Gabriel Martinelli ,     Arsenal    ,    Brazil   ,5
+35,   Kaoru Mitoma ,     Brighton & Hove Albion    ,    Japan   ,5
+35,   Bernardo Silva ,     Manchester City    ,    Portugal   ,5
+35,   Marcus Rashford ,     Manchester United    ,    England   ,5
+35,   Allan Saint-Maximin ,     Newcastle United    ,    France   ,5
+35,   Kenny Tete ,     Fulham    ,    Netherlands   ,5
+35,   Ben White ,     Arsenal    ,    England   ,5
+35,   Callum Wilson ,     Newcastle United    ,    England   ,5
+50,   Leon Bailey ,     Aston Villa    ,    Jamaica   ,4
+50,   Roberto Firmino ,     Liverpool    ,    Brazil   ,4
+50,   Patson Daka ,     Leicester City    ,    Zambia   ,4
+50,   Eberechi Eze ,     Crystal Palace    ,    England   ,4
+50,   Wilfried Gnonto ,     Leeds United    ,    Italy   ,4
+50,   Ilkay Gündogan ,     Manchester City    ,    Germany   ,4
+50,   Sean Longstaff ,     Newcastle United    ,    England   ,4
+50,   Harrison Reed ,     Fulham    ,    England   ,4
+50,   Marcus Tavernier ,     Bournemouth    ,    England   ,4
+50,   Diogo Jota ,     Liverpool    ,    Portugal   ,4
+50,   Ivan Toney ,     Brentford    ,    England   ,4
+50,   Konstantinos Tsimikas ,     Liverpool    ,    Greece   ,4
+50,   Jamie Vardy ,     Leicester City    ,    England   ,4
+50,   James Ward-Prowse ,     Southampton    ,    England   ,4
+64,   Brenden Aaronson ,     Leeds United    ,    United States   ,3
+64,   Ché Adams ,     Southampton    ,    Scotland   ,3
+64,   Michail Antonio ,   -  ,    Jamaica   ,3
+64,   Jordan Ayew ,     Crystal Palace    ,    Ghana   ,3
+64,   Saïd Benrahma ,     West Ham United    ,    Algeria   ,3
+64,   Casemiro ,     Manchester United    ,    Brazil   ,3
+64,   Timothy Castagne ,     Leicester City    ,    Belgium   ,3
+64,   Richarlison ,     Tottenham Hotspur    ,    Brazil   ,3
+64,   Cheick Doucouré ,     Crystal Palace    ,    Mali   ,3
+64,   Brennan Johnson ,     Nottingham Forest    ,    Wales   ,3
+64,   Harry Kane ,     Tottenham Hotspur    ,    England   ,3
+64,   Neeskens Kebano ,     Fulham    ,    DR Congo   ,3
+64,   John McGinn ,     Aston Villa    ,    Scotland   ,3
+64,   Dwight McNeil ,     Everton    ,    England   ,3
+64,   Álex Moreno ,     Aston Villa    ,    Spain   ,3
+64,   Darwin Núñez ,     Liverpool    ,    Uruguay   ,3
+64,   Christian Nørgaard ,     Brentford    ,    Denmark   ,3
+64,   Dango Ouattara ,     Bournemouth    ,    Burkina Faso   ,3
+64,   Pedro Porro ,     Tottenham Hotspur    ,    Spain   ,3
+64,   Jadon Sancho ,     Manchester United    ,    England   ,3
+64,   Fabian Schär ,     Newcastle United    ,    Switzerland   ,3
+64,   Tomás Soucek ,     West Ham United    ,    [object Object]   ,3
+64,   Raheem Sterling ,     Chelsea    ,    England   ,3
+64,   Lucas Paquetá ,     West Ham United    ,    Brazil   ,3
+64,   Danny Welbeck ,     Brighton & Hove Albion    ,    England   ,3
+64,   Harry Wilson ,     Fulham    ,    Wales   ,3
+64,   Yoane Wissa ,     Brentford    ,    DR Congo   ,3
+64,   Hakim Ziyech ,     Chelsea    ,    Morocco   ,3
+92,   Carlos Alcaraz ,     Southampton    ,    Argentina   ,2
+92,   Miguel Almirón ,     Newcastle United    ,    Paraguay   ,2
+92,   Carlos Vinícius ,     Fulham    ,    Brazil   ,2
+92,   Patrick Bamford ,     Leeds United    ,    England   ,2
+92,   Armel Bella-Kotchap ,     Southampton    ,    Germany   ,2
+92,   Rodrigo Bentancur ,     Tottenham Hotspur    ,    Uruguay   ,2
+92,   Emiliano Buendía ,     Aston Villa    ,    Argentina   ,2
+92,   Ben Chilwell ,     Chelsea    ,    England   ,2
+92,   Levi Colwill ,     Brighton & Hove Albion    ,    England   ,2
+92,   Lewis Cook ,     Bournemouth    ,    England   ,2
+92,   Marc Cucurella ,     Chelsea    ,    Spain   ,2
+92,   Diogo Dalot ,     Manchester United    ,    Portugal   ,2
+92,   Josh Dasilva ,     Brentford    ,    England   ,2
+92,   Ben Davies ,     Tottenham Hotspur    ,    Wales   ,2
+92,   Emmanuel Dennis ,     Nottingham Forest    ,    Nigeria   ,2
+92,   Kiernan Dewsbury-Hall ,     Leicester City    ,    England   ,2
+92,   Luis Díaz ,     Liverpool    ,    Colombia   ,2
+92,   Moussa Djenepo ,     Southampton    ,    Mali   ,2
+92,   Antony ,     Manchester United    ,    Brazil   ,2
+92,   Danilo ,     Nottingham Forest    ,    Brazil   ,2
+92,   Abdoulaye Doucouré ,     Everton    ,    Mali   ,2
+92,   Odsonne Édouard ,     Crystal Palace    ,    France   ,2
+92,   Harvey Elliott ,   -  ,    England   ,2
+92,   Thiago Silva ,     Chelsea    ,    Brazil   ,2
+92,   Julio Enciso ,     Brighton & Hove Albion    ,    Paraguay   ,2
+92,   Wout Faes ,     Leicester City    ,    Belgium   ,2
+92,   Evan Ferguson ,     Brighton & Hove Albion    ,    Ireland   ,2
+92,   Enzo Fernández ,     Chelsea    ,    Argentina   ,2
+92,   Fábio Vieira ,     Arsenal    ,    Portugal   ,2
+92,   Cody Gakpo ,     Liverpool    ,    Netherlands   ,2
+92,   Alejandro Garnacho ,     Manchester United    ,    Argentina   ,2
+92,   Joe Gelhardt ,   -  ,    England   ,2
+92,   Sam Greenwood ,     Leeds United    ,    England   ,2
+92,   Jordan Henderson ,     Liverpool    ,    England   ,2
+92,   Rico Henry ,     Brentford    ,    England   ,2
+92,   Danny Ings ,     West Ham United    ,    England   ,2
+92,   Michael Keane ,     Everton    ,    England   ,2
+92,   Thilo Kehrer ,     West Ham United    ,    Germany   ,2
+92,   Lloyd Kelly ,     Bournemouth    ,    England   ,2
+92,   Mateo Kovacic ,     Chelsea    ,    Croatia   ,2
+92,   Clément Lenglet ,     Tottenham Hotspur    ,    France   ,2
+92,   Alexis Mac Allister ,     Brighton & Hove Albion    ,    Argentina   ,2
+92,   Sékou Mara ,     Southampton    ,    France   ,2
+92,   Anthony Martial ,     Manchester United    ,    France   ,2
+92,   Ben Mee ,     Brentford    ,    England   ,2
+92,   Tyrone Mings ,     Aston Villa    ,    England   ,2
+92,   Tyrick Mitchell ,     Crystal Palace    ,    England   ,2
+92,   Mason Mount ,     Chelsea    ,    England   ,2
+92,   Mykhailo Mudryk ,     Chelsea    ,    Ukraine   ,2
+92,   Jacob Murphy ,     Newcastle United    ,    England   ,2
+92,   Reiss Nelson ,     Arsenal    ,    England   ,2
+92,   Amadou Onana ,     Everton    ,    Belgium   ,2
+92,   Frank Onyeka ,     Brentford    ,    Nigeria   ,2
+92,   Romain Perraud ,     Southampton    ,    France   ,2
+92,   Declan Rice ,     West Ham United    ,    England   ,2
+92,   Marc Roca ,     Leeds United    ,    Spain   ,2
+92,   Fred ,     Manchester United    ,    Brazil   ,2
+92,   João Moutinho ,     Wolverhampton Wanderers    ,    Portugal   ,2
+92,   Luke Shaw ,     Manchester United    ,    England   ,2
+92,   Emile Smith Rowe ,     Arsenal    ,    England   ,2
+92,   John Stones ,     Manchester City    ,    England   ,2
+92,   Crysencio Summerville ,     Leeds United    ,    Netherlands   ,2
+92,   Fabinho ,     Liverpool    ,    Brazil   ,2
+92,   Youri Tielemans ,     Leicester City    ,    Belgium   ,2
+92,   Theo Walcott ,     Southampton    ,    England   ,2
+92,   Ryan Yates ,     Nottingham Forest    ,    England   ,2
+92,   Wilfried Zaha ,     Crystal Palace    ,    Cote D’Ivoire   ,2
+92,   Oleksandr Zinchenko ,     Arsenal    ,    Ukraine   ,2
+160,   Manuel Akanji ,     Manchester City    ,    Switzerland   ,1
+160,   Elliot Anderson ,     Newcastle United    ,    Scotland   ,1
+160,   Jaidon Anthony ,     Bournemouth    ,    England   ,1
+160,   Joelinton ,     Newcastle United    ,    Brazil   ,1
+160,   Stuart Armstrong ,     Southampton    ,    Scotland   ,1
+160,   Adam Armstrong ,     Southampton    ,    England   ,1
+160,   Taiwo Awoniyi ,     Nottingham Forest    ,    Nigeria   ,1
+160,   Luke Ayling ,     Leeds United    ,    England   ,1
+160,   Shandon Baptiste ,     Brentford    ,    Grenada   ,1
+160,   Ricardo Pereira ,     Leicester City    ,    Portugal   ,1
+160,   Harvey Barnes ,     Leicester City    ,    England   ,1
+160,   Alisson ,     Liverpool    ,    Brazil   ,1
+160,   Philip Billing ,     Bournemouth    ,    Denmark   ,1
+160,   Willy Boly ,     Nottingham Forest    ,    Cote D’Ivoire   ,1
+160,   Hugo Bueno ,     Wolverhampton Wanderers    ,    Spain   ,1
+160,   Facundo Buonanotte ,     Brighton & Hove Albion    ,    Argentina   ,1
+160,   Nélson Semedo ,     Wolverhampton Wanderers    ,    Portugal   ,1
+160,   Moisés Caicedo ,     Brighton & Hove Albion    ,    Ecuador   ,1
+160,   Dominic Calvert-Lewin ,     Everton    ,    England   ,1
+160,   Matty Cash ,     Aston Villa    ,    Poland   ,1
+160,   João Cancelo ,   -  ,    Portugal   ,1
+160,   Ryan Christie ,     Bournemouth    ,    Scotland   ,1
+160,   Conor Coady ,     Everton    ,    England   ,1
+160,   Vladimír Coufal ,     West Ham United    ,    [object Object]   ,1
+160,   Aaron Cresswell ,     West Ham United    ,    England   ,1
+160,   Rúben Neves ,     Wolverhampton Wanderers    ,    Portugal   ,1
+160,   Felipe ,     Nottingham Forest    ,    Brazil   ,1
+160,   Bobby De Cordova-Reid ,   -  ,    Jamaica   ,1
+160,   Eric Dier ,     Tottenham Hotspur    ,    England   ,1
+160,   Anthony Elanga ,     Manchester United    ,    Sweden   ,1
+160,   Mohamed Elyounoussi ,     Southampton    ,    Norway   ,1
+160,   Junior Firpo ,     Leeds United    ,    Spain   ,1
+160,   Pablo Fornals ,     West Ham United    ,    Spain   ,1
+160,   Jorginho ,     Arsenal    ,    Italy   ,1
+160,   Conor Gallagher ,     Chelsea    ,    England   ,1
+160,   Gonçalo Guedes ,   -  ,    Portugal   ,1
+160,   James Garner ,     Everton    ,    England   ,1
+160,   Bryan Gil ,   -  ,    Spain   ,1
+160,   Billy Gilmour ,     Brighton & Hove Albion    ,    Scotland   ,1
+160,   Ben Godfrey ,     Everton    ,    England   ,1
+160,   Sergio Gómez ,     Manchester City    ,    Spain   ,1
+160,   Demarai Gray ,     Everton    ,    England   ,1
+160,   Idrissa Gueye ,     Everton    ,    Senegal   ,1
+160,   Kai Havertz ,     Chelsea    ,    Germany   ,1
+160,   Aaron Hickey ,     Brentford    ,    Scotland   ,1
+160,   Will Hughes ,     Crystal Palace    ,    England   ,1
+160,   Hwang Hee-Chan ,     Wolverhampton Wanderers    ,    South Korea   ,1
+160,   Alexander Isak ,     Newcastle United    ,    Sweden   ,1
+160,   Dan James ,     Fulham    ,    Wales   ,1
+160,   Reece James ,     Chelsea    ,    England   ,1
+160,   Vitaly Janelt ,     Brentford    ,    Germany   ,1
+160,   Raúl Jiménez ,     Wolverhampton Wanderers    ,    Mexico   ,1
+160,   Curtis Jones ,     Liverpool    ,    England   ,1
+160,   Boubacar Kamara ,     Aston Villa    ,    France   ,1
+160,   N'Golo Kanté ,     Chelsea    ,    France   ,1
+160,   Kalidou Koulibaly ,     Chelsea    ,    Senegal   ,1
+160,   Rasmus Kristensen ,     Leeds United    ,    Denmark   ,1
+160,   Victor Kristiansen ,     Leicester City    ,    Denmark   ,1
+160,   Adam Lallana ,     Brighton & Hove Albion    ,    England   ,1
+160,   Emerson Royal ,     Tottenham Hotspur    ,    Brazil   ,1
+160,   Mario Lemina ,     Wolverhampton Wanderers    ,    Gabon   ,1
+160,   Keane Lewis-Potter ,     Brentford    ,    England   ,1
+160,   Renan Lodi ,     Nottingham Forest    ,    Brazil   ,1
+160,   Ruben Loftus-Cheek ,     Chelsea    ,    England   ,1
+160,   Orel Mangala ,   -  ,    Belgium   ,1
+160,   Kevin Mbabu ,   -  ,    Switzerland   ,1
+160,   Weston McKennie ,     Leeds United    ,    United States   ,1
+160,   James Milner ,     Liverpool    ,    England   ,1
+160,   Aleksandar Mitrovic ,     Fulham    ,    Serbia   ,1
+160,   Rodrigo ,     Leeds United    ,    Spain   ,1
+160,   Enock Mwepu ,   -  ,    Zambia   ,1
+160,   Eddie Nketiah ,     Arsenal    ,    England   ,1
+160,   Matheus Nunes ,     Wolverhampton Wanderers    ,    Portugal   ,1
+160,   Cole Palmer ,     Manchester City    ,    England   ,1
+160,   Ayoze Pérez ,   -  ,    Spain   ,1
+160,   Jordan Pickford ,     Everton    ,    England   ,1
+160,   Christian Pulisic ,     Chelsea    ,    United States   ,1
+160,   Antonee Robinson ,     Fulham    ,    United States   ,1
+160,   Cristian Romero ,     Tottenham Hotspur    ,    Argentina   ,1
+160,   Joe Rothwell ,     Bournemouth    ,    England   ,1
+160,   Georginio Rutter ,     Leeds United    ,    France   ,1
+160,   Marcel Sabitzer ,     Manchester United    ,    Austria   ,1
+160,   William Saliba ,   -  ,    France   ,1
+160,   Mohammed Salisu ,     Southampton    ,    Ghana   ,1
+160,   Ederson ,     Manchester City    ,    Brazil   ,1
+160,   Jeremy Sarmiento ,     Brighton & Hove Albion    ,    Ecuador   ,1
+160,   Pape Sarr ,     Tottenham Hotspur    ,    Senegal   ,1
+160,   Kevin Schade ,     Brentford    ,    Germany   ,1
+160,   Jeffrey Schlupp ,     Crystal Palace    ,    Ghana   ,1
+160,   Lyanco ,     Southampton    ,    Brazil   ,1
+160,   Adam Smith ,     Bournemouth    ,    England   ,1
+160,   Harry Souttar ,     Leicester City    ,    Australia   ,1
+160,   Jason Steele ,     Brighton & Hove Albion    ,    England   ,1
+160,   Pascal Struijk ,     Leeds United    ,    Netherlands   ,1
+160,   Kamaldeen Sulemana ,     Southampton    ,    Ghana   ,1
+160,   James Tarkowski ,     Everton    ,    England   ,1
+160,   Kieran Tierney ,     Arsenal    ,    Scotland   ,1
+160,   Takehiro Tomiyasu ,     Arsenal    ,    Japan   ,1
+160,   Adama Traoré ,     Wolverhampton Wanderers    ,    Spain   ,1
+160,   Boubacar Traoré ,     Wolverhampton Wanderers    ,    Mali   ,1
+160,   Virgil van Dijk ,     Liverpool    ,    Netherlands   ,1
+160,   Joël Veltman ,     Brighton & Hove Albion    ,    Netherlands   ,1
+160,   Wout Weghorst ,     Manchester United    ,    Netherlands   ,1
+160,   Jordan Zemura ,     Bournemouth    ,    Zimbabwe   ,1
+264,   Thiago Alcântara ,     Liverpool    ,    Spain   ,0
+264,   Tom Cairney ,     Fulham    ,    Scotland   ,0
+264,   Manuel Lanzini ,     West Ham United    ,    Argentina   ,0
+264,   Pedro Neto ,     Wolverhampton Wanderers    ,    Portugal   ,0
+264,   Neal Maupay ,     Everton    ,    France   ,0
+264,   Ryan Sessegnon ,     Tottenham Hotspur    ,    England   ,0
+264,   Oliver Skipp ,     Tottenham Hotspur    ,    England   ,0
+264,   Boubakary Soumaré ,     Leicester City    ,    France   ,0
