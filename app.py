@@ -227,7 +227,7 @@ with tab2 :
                 radialaxis=dict(showticklabels=False, ticks=''),
                 angularaxis=dict(showticklabels=True, tickmode='array', tickvals=angles, ticktext=feature_names)
             ),
-            title='Poligon dengan Fitur Pemain Bola',  # Judul plot
+            title='Players Features Value',  # Judul plot
         )
 
         # Mengatur ukuran plot
@@ -242,10 +242,10 @@ with tab2 :
                     
         with col_scorer_img :
             st.image(golden_boot_img, caption='Erling Braut Halaand')
-            with st.expander('Player Stats') : 
+            with st.expander('Player Features Stats') : 
                 feature_names = ['Headed Goals', 'Goals with right foot', 'Goals with left foot', 'Penalties Scored', 'Shots accuracy (%)', 'Big chances missed']  # Nama-nama fitur
                 feature_values = [7, 6, 23, 7, 49, 28]  # Nilai fitur pada setiap sisi poligon
-                selected_features = st.multiselect('Pilih Fitur', feature_names, default=feature_names)
+                selected_features = st.multiselect('Select Features', feature_names, default=feature_names)
                 selected_indices = [feature_names.index(feature) for feature in selected_features]
                 selected_values = [feature_values[i] for i in selected_indices]
                 plot_polygon_with_feature_values(selected_indices, selected_features, selected_values)
@@ -255,10 +255,10 @@ with tab2 :
             st.dataframe(df_top_assist, use_container_width=True)
         with col_assist_img : 
             st.image(pots_img, caption='Kevin de Bruyne', use_column_width=True)
-            with st.expander('Player Stats') :
+            with st.expander('Player Features Stats') :
                 feature_names = ['Passes', 'Passes/nper match', 'Big chances created', 'Cross accuracy (%)', 'Through balls', 'Accurate long balls']  # Nama-nama fitur
                 feature_values = [1357, 42.41, 31, 29, 28, 81]  # Nilai fitur pada setiap sisi poligon
-                selected_features = st.multiselect('Pilih Fitur', feature_names, default=feature_names)
+                selected_features = st.multiselect('Select Features', feature_names, default=feature_names)
                 selected_indices = [feature_names.index(feature) for feature in selected_features]
                 selected_values = [feature_values[i] for i in selected_indices]
                 plot_polygon_with_feature_values(selected_indices, selected_features, selected_values)
@@ -268,10 +268,10 @@ with tab2 :
             st.dataframe(df_top_cleansheet, use_container_width=True)
         with col_cleansheet_img:
             st.image(golden_glove_img, caption='David de Gea')
-            with st.expander('Player Stats') :
+            with st.expander('Player Features Stats') :
                 feature_names = ['Saves', 'Penalties Saved', 'Goal Conceded', 'Erros leading to goal', 'Own goals', 'Accurate long balls', 'Punches', 'High Claims', 'Catches']  # Nama-nama fitur
                 feature_values = [101, 1, 43, 2, 0, 187, 12, 14, 5]  # Nilai fitur pada setiap sisi poligon
-                selected_features = st.multiselect('Pilih Fitur', feature_names, default=feature_names)
+                selected_features = st.multiselect('Select Features', feature_names, default=feature_names)
                 selected_indices = [feature_names.index(feature) for feature in selected_features]
                 selected_values = [feature_values[i] for i in selected_indices]
                 plot_polygon_with_feature_values(selected_indices, selected_features, selected_values)
@@ -282,125 +282,126 @@ with tab2 :
 
     # ======== Dataframe list top players End ======== #
 
-def plot_club_polygon_with_feature_values(clubs_data):
-    n = len(clubs_data)  # Jumlah klub yang dipilih
-    n_features = len(clubs_data[0]['values'])  # Jumlah fitur
+    # Fungsi untuk membuat plot poligon atribut klub dengan nilai-nilai fitur yang diberikan
+    def plot_club_polygon_with_feature_values(clubs_data, feature_names):
+        n = len(clubs_data)  # Jumlah klub yang dipilih
+        n_features = len(clubs_data[0]['values'])  # Jumlah fitur
 
-    # Normalisasi nilai fitur untuk setiap klub
-    for club_data in clubs_data:
-        club_data['values_normalized'] = normalize_log(club_data['values'])
+        # Normalisasi nilai fitur untuk setiap klub
+        for club_data in clubs_data:
+            club_data['values_normalized'] = normalize_log(club_data['values'])
 
-    # Menambahkan satu elemen tambahan untuk memastikan kesimetrisan poligon
-    for club_data in clubs_data:
-        club_data['values_normalized'].append(club_data['values_normalized'][0])
-        club_data['values'].append(club_data['values'][0])
+        # Menambahkan satu elemen tambahan untuk memastikan kesimetrisan poligon
+        for club_data in clubs_data:
+            club_data['values_normalized'].append(club_data['values_normalized'][0])
+            club_data['values'].append(club_data['values'][0])
 
-    # Mengatur sudut untuk setiap sisi poligon
-    angles = [i * 360 / float(n_features) for i in range(n_features)]
-    angles += [angles[0] + 360]
+        # Mengatur sudut untuk setiap sisi poligon
+        angles = [i * 360 / float(n_features) for i in range(n_features)]
+        angles += [angles[0] + 360]
 
-    # Membuat plotly figure
-    fig = go.Figure()
+        # Daftar warna yang akan digunakan untuk setiap klub
+        colors = ['red', 'green', 'blue', 'orange', 'purple', 'yellow', 'pink']
 
-    # Menambahkan trace untuk setiap klub
-    for club_data in clubs_data:
-        fig.add_trace(go.Scatterpolar(
-            r=club_data['values_normalized'],
-            theta=angles,
-            fill='toself',
-            name=club_data['name'],
-            hovertemplate='Club: %{name}<br>Nilai (Normalized): %{r:.2f}<br>Nilai (Original): %{text}<extra></extra>',
-            text=club_data['values'],
-            customdata=angles[:-1]  # Menambahkan data kustom berupa sudut
-        ))
+        # Membuat plotly figure
+        fig = go.Figure()
 
-    # Mengatur tampilan sumbu sudut
-    fig.update_layout(
-        polar=dict(
-            radialaxis=dict(showticklabels=False, ticks=''),
-            angularaxis=dict(showticklabels=True, tickmode='array', tickvals=angles, ticktext=feature_names)
-        ),
-        title='Club Attributes Polygon Plot',  # Judul plot
-    )
+        # Menambahkan trace untuk setiap klub
+        for i, club_data in enumerate(clubs_data):
+            fig.add_trace(go.Scatterpolar(
+                r=club_data['values_normalized'],
+                theta=angles,
+                fill='toself',
+                name=club_data['name'],
+                line_color=colors[i % len(colors)],  # Mengatur warna plot berdasarkan indeks klub
+                hovertemplate='Club: %{name}<br>Nilai (Normalized): %{r:.2f}<br>Nilai (Original): %{text}<extra></extra>',
+                text=club_data['values'],
+                customdata=angles[:-1]  # Menambahkan data kustom berupa sudut
+            ))
 
-    # Mengatur ukuran plot
-    fig.update_layout(width=500, height=500)
+        # Mengatur tampilan sumbu sudut
+        fig.update_layout(
+            polar=dict(
+                radialaxis=dict(showticklabels=False, ticks=''),
+                angularaxis=dict(showticklabels=True, tickmode='array', tickvals=angles, ticktext=feature_names)
+            ),
+            title='Club Attributes Polygon Plot',  # Judul plot
+        )
 
-    # Menampilkan plot menggunakan Streamlit
-    st.plotly_chart(fig)
-    
-with tab3 :   
-    st.subheader('Attack Attributes')
-    
-    # Membaca file 'attack.csv' menggunakan pd.read_csv()
-    attack_file_path = r'attack.csv'
-    df_attack = pd.read_csv(attack_file_path)
-    df_attack = df_attack.drop('Goals Free Kick', axis=1)
+        # Mengatur ukuran plot
+        fig.update_layout(width=700, height=500)
 
-    # Menggunakan Streamlit untuk memilih klub-klub yang ingin dibandingkan
-    with st.expander('Choose Club Here'):
-        club_options = df_attack['Club'].unique().tolist()
-        selected_clubs = st.multiselect('Available Clubs', club_options)
-        clubs_data = []
+        # Menampilkan plot menggunakan Streamlit
+        st.plotly_chart(fig)
+ 
+with tab3 : 
+    st.header('Club Attribute Stats')      
+   # Membaca data dari file CSV
+    df_attack = pd.read_csv('attack.csv')
+    df_defence = pd.read_csv('defence.csv')
+    df_team_play = pd.read_csv('team_play.csv')
 
-        # Mengambil data klub yang dipilih
-        for club in selected_clubs:
-            club_data = {
-                'name': club,
-                'values': df_attack[df_attack['Club'] == club].values.flatten()[2:].astype(float).tolist()
-            }
-            clubs_data.append(club_data)
+    att_col, def_col = st.columns(2)
+    col2_1, teamplay_col, col2_3 = st.columns([1,2,1])
+    # Menggunakan Streamlit untuk memilih klub-klub yang ingin dibandingkan pada file attack.csv
+    with att_col : 
+        st.subheader('Attack Attributes')
+        with st.expander('Choose Club Here'):
+            club_options_attack = df_attack['Club'].unique().tolist()
+            selected_clubs_attack = st.multiselect('Available Clubs', club_options_attack)
+            clubs_data_attack = []
 
-        # Menampilkan poligon untuk klub-klub yang dipilih
-        if len(clubs_data) > 0:
-            plot_club_polygon_with_feature_values(clubs_data)
-                
-    defence_file_path = r'defence.csv'
-    df_defence = pd.read_csv(defence_file_path)
+            # Mengambil data klub yang dipilih pada file attack.csv
+            for club in selected_clubs_attack:
+                club_data_attack = {
+                    'name': club,
+                    'values': df_attack[df_attack['Club'] == club].values.flatten()[2:].astype(float).tolist()
+                }
+                clubs_data_attack.append(club_data_attack)
 
-    st.write('_____')
+            # Menampilkan poligon untuk klub-klub yang dipilih pada file attack.csv
+            if len(clubs_data_attack) > 0:
+                plot_club_polygon_with_feature_values(clubs_data_attack, df_attack.columns[2:].tolist())
 
-    st.subheader('Defence Attributes')
-    # Menggunakan Streamlit untuk memilih klub-klub yang ingin dibandingkan
-    with st.expander('Choose Club Here'):
-        club_options = df_defence['Club'].unique().tolist()
-        selected_clubs = st.multiselect('Available Clubs', club_options)
-        clubs_data = []
+    with def_col :
+        # Menggunakan Streamlit untuk memilih klub-klub yang ingin dibandingkan pada file defence.csv
+        st.subheader('Defence Attributes')
+        with st.expander('Choose Club Here'):
+            club_options_defence = df_defence['Club'].unique().tolist()
+            selected_clubs_defence = st.multiselect('Available Clubs', club_options_defence)
+            clubs_data_defence = []
 
-        # Mengambil data klub yang dipilih
-        for club in selected_clubs:
-            club_data = {
-                'name': club,
-                'values': df_defence[df_defence['Club'] == club].values.flatten()[2:].astype(float).tolist()
-            }
-            clubs_data.append(club_data)
+            # Mengambil data klub yang dipilih pada file defence.csv
+            for club in selected_clubs_defence:
+                club_data_defence = {
+                    'name': club,
+                    'values': df_defence[df_defence['Club'] == club].values.flatten()[2:].astype(float).tolist()
+                }
+                clubs_data_defence.append(club_data_defence)
 
-        # Menampilkan poligon untuk klub-klub yang dipilih
-        if len(clubs_data) > 0:
-            plot_club_polygon_with_feature_values(clubs_data)
-            
-    teamplay_file_path = r'team_play.csv'
-    df_teamplay = pd.read_csv(teamplay_file_path)
+            # Menampilkan poligon untuk klub-klub yang dipilih pada file defence.csv
+            if len(clubs_data_defence) > 0:
+                plot_club_polygon_with_feature_values(clubs_data_defence, df_defence.columns[2:].tolist())
 
-    st.write('_____')
-    st.subheader('Team Play Attributes')
-    # Menggunakan Streamlit untuk memilih klub-klub yang ingin dibandingkan
-    with st.expander('Choose Club Here'):
-        club_options = df_teamplay['Club'].unique().tolist()
-        selected_clubs = st.multiselect('Available Clubs', club_options)
-        clubs_data = []
+    with teamplay_col : 
+        # Menggunakan Streamlit untuk memilih klub-klub yang ingin dibandingkan pada file team_play.csv
+        st.subheader('Team Play Attributes')
+        with st.expander('Choose Club Here'):
+            club_options_team_play = df_team_play['Club'].unique().tolist()
+            selected_clubs_team_play = st.multiselect('Available Clubs', club_options_team_play)
+            clubs_data_team_play = []
 
-        # Mengambil data klub yang dipilih
-        for club in selected_clubs:
-            club_data = {
-                'name': club,
-                'values': df_teamplay[df_teamplay['Club'] == club].values.flatten()[2:].astype(float).tolist()
-            }
-            clubs_data.append(club_data)
+            # Mengambil data klub yang dipilih pada file team_play.csv
+            for club in selected_clubs_team_play:
+                club_data_team_play = {
+                    'name': club,
+                    'values': df_team_play[df_team_play['Club'] == club].values.flatten()[2:].astype(float).tolist()
+                }
+                clubs_data_team_play.append(club_data_team_play)
 
-        # Menampilkan poligon untuk klub-klub yang dipilih
-        if len(clubs_data) > 0:
-            plot_club_polygon_with_feature_values(clubs_data)
+            # Menampilkan poligon untuk klub-klub yang dipilih pada file team_play.csv
+            if len(clubs_data_team_play) > 0:
+                plot_club_polygon_with_feature_values(clubs_data_team_play, df_team_play.columns[2:].tolist())
     
     source_data3 = "https://www.premierleague.com/stats/top/clubs/wins?se=489"
     st.markdown(f'Source : [Premier League Club Stats]({source_data3})', unsafe_allow_html=True)
@@ -438,35 +439,41 @@ with tab4 :
 
     with cols_home:
         home_team = st.selectbox('Home Team', options=no_team_options)
-        ht_home_score = st.text_input('Half Time Home Scored', value=0)
-        home_possesion = st.slider('Home Team Possesion',1, 100, value=0)
-        home_SoT = st.text_input('Home Shots on Target', value=0)
-        home_shots = st.text_input('Home Shots', value=0)
-        home_touches = st.text_input('Home Touches', value=0)
-        home_passes = st.text_input('Home Passes', value=0)
-        home_tackles = st.text_input('Home Tackles', value=0)
-        home_clearances = st.text_input('Home Clearances', value=0)
-        home_corners = st.text_input('Home Corners', value=0)
-        home_offsides = st.text_input('Home Offsides', value=0)
-        home_yellow_card = st.text_input('Home Yellow Card', value=0)
-        home_red_card = st.text_input('Home Red Card', value=0)
-        home_fouls = st.text_input('Home Fouls', value=0)
+        home_possesion = st.slider('Home Team Possesion',0, 100, value=0)
+        cols_home_1, cols_home_2 = st.columns(2)
+        with cols_home_1 : 
+            ht_home_score = st.text_input('Half Time Home Scored', value=0)
+            home_SoT = st.text_input('Home Shots on Target', value=0)
+            home_shots = st.text_input('Home Shots', value=0)
+            home_touches = st.text_input('Home Touches', value=0)
+            home_passes = st.text_input('Home Passes', value=0)
+            home_tackles = st.text_input('Home Tackles', value=0)
+        with cols_home_2 :
+            home_clearances = st.text_input('Home Clearances', value=0)
+            home_corners = st.text_input('Home Corners', value=0)
+            home_offsides = st.text_input('Home Offsides', value=0)
+            home_yellow_card = st.text_input('Home Yellow Card', value=0)
+            home_red_card = st.text_input('Home Red Card', value=0)
+            home_fouls = st.text_input('Home Fouls', value=0)
 
     with cols_away:
         away_team = st.selectbox('Away Team', options=no_team_options)
-        ht_away_score = st.text_input('Half Time Away Scored', value=0)
-        away_possesion = st.slider('Away Team Possesion',1, 100, value=100-home_possesion)
-        awat_SoT = st.text_input('Away Shots on Target', value=0)
-        awat_shots = st.text_input('Away Shots', value=0)
-        away_touches = st.text_input('Away Touches', value=0)
-        away_passes = st.text_input('Away Passes', value=0)
-        away_tackles = st.text_input('Away Tackles', value=0)
-        away_clearances = st.text_input('Away Clearances', value=0)
-        away_corners = st.text_input('Away Corners', value=0)
-        away_offsides = st.text_input('Away Offsides', value=0)
-        away_yellow_card = st.text_input('Away Yellow Card', value=0)
-        away_red_card = st.text_input('Away Red Card', value=0)
-        away_fouls = st.text_input('Away Fouls', value=0)
+        away_possesion = st.slider('Away Team Possesion',0, 100, value=100-home_possesion)
+        cols_away_1, cols_away_2 = st.columns(2)
+        with cols_away_1 : 
+            ht_away_score = st.text_input('Half Time Away Scored', value=0)
+            awat_SoT = st.text_input('Away Shots on Target', value=0)
+            awat_shots = st.text_input('Away Shots', value=0)
+            away_touches = st.text_input('Away Touches', value=0)
+            away_passes = st.text_input('Away Passes', value=0)
+            away_tackles = st.text_input('Away Tackles', value=0)
+        with cols_away_2 : 
+            away_clearances = st.text_input('Away Clearances', value=0)
+            away_corners = st.text_input('Away Corners', value=0)
+            away_offsides = st.text_input('Away Offsides', value=0)
+            away_yellow_card = st.text_input('Away Yellow Card', value=0)
+            away_red_card = st.text_input('Away Red Card', value=0)
+            away_fouls = st.text_input('Away Fouls', value=0)
 
     result_prediction = model.predict([[home_team, away_team, ht_home_score, ht_away_score,
                                         home_possesion, away_possesion,
