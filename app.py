@@ -314,9 +314,9 @@ with tab2 :
                 fill='toself',
                 name=club_data['name'],
                 line_color=colors[i % len(colors)],  # Mengatur warna plot berdasarkan indeks klub
-                hovertemplate='Club: %{name}<br>Nilai (Normalized): %{r:.2f}<br>Nilai (Original): %{text}<extra></extra>',
+                hovertemplate='Club:' + club_data['name'] + '<br>Nilai (Normalized): %{r:.2f}<br>Nilai (Original): %{text}<extra></extra>',
                 text=club_data['values'],
-                customdata=angles[:-1]  # Menambahkan data kustom berupa sudut
+                customdata=[club_data['name']] + angles[:-1]  # Menambahkan nama klub ke data kustom
             ))
 
         # Mengatur tampilan sumbu sudut
