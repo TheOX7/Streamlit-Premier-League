@@ -49,7 +49,7 @@ with tab1 :
         st.markdown(justify_text, unsafe_allow_html=True)
         st.markdown(f'<div class="text-justify">{opening_1}</div>', unsafe_allow_html=True)
     with col1_2 :
-        man_city_img = Image.open('D:\GitHub\Streamlit-Premier-League\man-city.jpeg')
+        man_city_img = Image.open('man-city.jpeg')
         st.image(man_city_img, caption='Man City Players Lifting PL Trophy',  use_column_width=True)
     
     # Opening2 (Posisi ke-5,6,7, dan West Ham)
