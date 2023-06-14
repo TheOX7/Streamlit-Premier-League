@@ -218,7 +218,11 @@ with tab2 :
             fillcolor='rgba(0, 123, 255, 0.2)',
             line=dict(color='rgb(0, 123, 255)'),
             hovertemplate='Nilai (Normalized): %{r:.2f}<br>Nilai (Original): %{text}<extra></extra>',
-            text=feature_values        
+            text=feature_values,
+            marker=dict(
+                    size=10,  # Mengatur ukuran titik datapoint
+                    symbol='circle'  # Mengatur simbol titik datapoint
+            )        
         ))
 
         # Mengatur tampilan sumbu sudut
