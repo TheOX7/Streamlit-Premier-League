@@ -435,7 +435,7 @@ with tab4 :
         with col_club2 :
             for item in list_items[10:]:
                 st.markdown(f"- {item}")
-        st.write("Ket : X -> Memprediksi hasil akhir dengan club tersebut belum bisa diprediksi")
+        st.write("Ket : X -> Tidak bisa diprediksi (Tidak ada history data)")
                     
     cols_home, cols_penengah, cols_away = st.columns([4,1,4])
 
