@@ -298,7 +298,7 @@ with tab2 :
 
         # Mengatur sudut untuk setiap sisi poligon
         angles = [i * 360 / float(n_features) for i in range(n_features)]
-        angles += [angles[0] + 360]
+        angles += [angles[0]]  # Menghapus 360 dari daftar sudut
 
         # Daftar warna yang akan digunakan untuk setiap klub
         colors = ['red', 'green', 'blue', 'orange', 'purple', 'yellow', 'pink']
@@ -323,7 +323,7 @@ with tab2 :
         fig.update_layout(
             polar=dict(
                 radialaxis=dict(showticklabels=False, ticks=''),
-                angularaxis=dict(showticklabels=True, tickmode='array', tickvals=angles, ticktext=feature_names)
+                angularaxis=dict(showticklabels=True, tickmode='array', tickvals=angles[:-1], ticktext=feature_names)
             ),
             title='Club Attributes Polygon Plot',  # Judul plot
         )
@@ -333,6 +333,7 @@ with tab2 :
 
         # Menampilkan plot menggunakan Streamlit
         st.plotly_chart(fig)
+
  
 with tab3 : 
     st.header('Club Attribute Stats')      
