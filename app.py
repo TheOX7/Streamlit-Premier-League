@@ -316,7 +316,11 @@ with tab2 :
                 line_color=colors[i % len(colors)],  # Mengatur warna plot berdasarkan indeks klub
                 hovertemplate='Club:' + club_data['name'] + '<br>Nilai (Normalized): %{r:.2f}<br>Nilai (Original): %{text}<extra></extra>',
                 text=club_data['values'],
-                customdata=[club_data['name']] + angles[:-1]  # Menambahkan nama klub ke data kustom
+                customdata=[club_data['name']] + angles[:-1],  # Menambahkan nama klub ke data kustom
+                marker=dict(
+                    size=11,  # Mengatur ukuran titik datapoint
+                    symbol='circle'  # Mengatur simbol titik datapoint
+            )
             ))
 
         # Mengatur tampilan sumbu sudut
