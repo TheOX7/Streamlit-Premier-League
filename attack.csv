@@ -7,15 +7,15 @@ Rank,Club,Goals,Shots on Target,Goals Inside Box,Goals Outside Box,Goals Penalty
 6,     Crystal Palace ,40,136,35,5,1,10,58,426,1,7
 7,     Newcastle United ,69,197,56,14,6,26,71,571,1,10
 8,     Southampton ,36,142,28,8,2,11,57,417,3,6
-9,     Wolverhampton Wanderers ,31,126,28,4,3,6,62,412,,2
-10,     Arsenal ,88,204,79,9,3,15,56,593,,12
-11,     Everton ,35,152,29,6,3,6,64,429,,5
+9,     Wolverhampton Wanderers ,31,126,28,4,3,6,62,412,0,2
+10,     Arsenal ,88,204,79,9,3,15,56,593,0,12
+11,     Everton ,35,152,29,6,3,6,64,429,0,5
 12,     Leicester City ,51,152,40,11,3,13,83,418,2,3
-13,     Tottenham Hotspur ,70,199,60,10,5,17,67,518,,15
+13,     Tottenham Hotspur ,70,199,60,10,5,17,67,518,0,15
 14,     Brighton & Hove Albion ,72,232,63,9,6,16,70,613,1,10
 15,     Fulham ,55,149,50,6,5,15,60,429,1,15
 16,     Nottingham Forest ,38,118,36,2,3,9,67,368,,7
-17,     Leeds United ,48,145,41,7,1,6,60,462,,9
-18,     Bournemouth ,37,133,34,3,,5,38,358,,5
+17,     Leeds United ,48,145,41,7,1,6,60,462,0,9
+18,     Bournemouth ,37,133,34,3,,5,38,358,0,5
 19,     Chelsea ,38,159,33,6,3,15,74,484,1,5
-20,     West Ham United ,42,145,34,8,6,16,62,474,,8
+20,     West Ham United ,42,145,34,8,6,16,62,474,0,8
