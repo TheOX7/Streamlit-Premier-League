@@ -1,5 +1,5 @@
 Rank,Club,Goals,Shots on Target,Goals Inside Box,Goals Outside Box,Goals Penalty,Hit Woodwork,Offsides,Shots,Goals Free Kick,Goal Header
-1,     Manchester United ,58,215,53,5,3,20,80,593,,7
+1,     Manchester United ,58,215,53,5,3,20,80,593,0,7
 2,     Liverpool ,75,212,67,8,2,16,84,605,1,13
 3,     Manchester City ,94,219,82,13,9,19,51,600,2,12
 4,     Brentford ,58,162,52,6,7,10,72,408,2,10
@@ -14,8 +14,8 @@ Rank,Club,Goals,Shots on Target,Goals Inside Box,Goals Outside Box,Goals Penalty
 13,     Tottenham Hotspur ,70,199,60,10,5,17,67,518,0,15
 14,     Brighton & Hove Albion ,72,232,63,9,6,16,70,613,1,10
 15,     Fulham ,55,149,50,6,5,15,60,429,1,15
-16,     Nottingham Forest ,38,118,36,2,3,9,67,368,,7
+16,     Nottingham Forest ,38,118,36,2,3,9,67,368,0,7
 17,     Leeds United ,48,145,41,7,1,6,60,462,0,9
-18,     Bournemouth ,37,133,34,3,,5,38,358,0,5
+18,     Bournemouth ,37,133,34,3,0,5,38,358,0,5
 19,     Chelsea ,38,159,33,6,3,15,74,484,1,5
 20,     West Ham United ,42,145,34,8,6,16,62,474,0,8
