@@ -417,7 +417,7 @@ with tab3 :
 
     
 with tab4 :         
-    model_path = "model_result.pkl"
+    model_path = "model.joblib"
     pickle_in = open(model_path, "rb")
     model = pickle.load(pickle_in)
     
