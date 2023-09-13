@@ -414,7 +414,7 @@ with tab3 :
     st.markdown(f'Source : [Premier League Club Stats]({source_data3})', unsafe_allow_html=True)
 
     
-with tab4 :         
+# with tab4 :         
     model = joblib.load("model_pl.sav")
     
     st.header('Predicting Premier League Match Result')
