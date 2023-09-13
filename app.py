@@ -7,8 +7,6 @@ import plotly.graph_objects as go
 import math
 import csv
 import joblib
-import sklearn
-import pickle
 from PIL import Image
 from lorem_text import lorem
 import os

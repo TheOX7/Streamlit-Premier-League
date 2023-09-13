@@ -5,7 +5,5 @@ matplotlib
 numpy
 plotly
 joblib
-scikit-learn
-pickles
 Image
 lorem_text
