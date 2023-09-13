@@ -415,85 +415,85 @@ with tab3 :
 
     
 # with tab4 :         
-    model = joblib.load("model_pl.sav")
+    # model = joblib.load("model_pl.sav")
     
-    st.header('Predicting Premier League Match Result')
+    # st.header('Predicting Premier League Match Result')
     
-    # Membuat sebuah list
-    list_items = ["Arsenal : 0", "Aston Villa : 1", "Bournemouth : 6", "Brentford : 7", "Brighton & Hove Albion : 8",
-                  "Burnley : 9", "Chelsea : 12", "Crystal Palace : 13", "Everton : 15", "Fulham : 16", "Liverpool : 21",
-                  "Luton Town : X", "Man. City : 22", "Man. United : 23", "Newcastle United : 26", "Nott'm Forrst : 28",
-                  "Sheffield United : 32", "Tottenham Hostpur : 37", "West Ham United : 40", "Wolves : 42"]
+    # # Membuat sebuah list
+    # list_items = ["Arsenal : 0", "Aston Villa : 1", "Bournemouth : 6", "Brentford : 7", "Brighton & Hove Albion : 8",
+    #               "Burnley : 9", "Chelsea : 12", "Crystal Palace : 13", "Everton : 15", "Fulham : 16", "Liverpool : 21",
+    #               "Luton Town : X", "Man. City : 22", "Man. United : 23", "Newcastle United : 26", "Nott'm Forrst : 28",
+    #               "Sheffield United : 32", "Tottenham Hostpur : 37", "West Ham United : 40", "Wolves : 42"]
 
-    # Menampilkan expander di sidebar
-    with st.expander("Home | Away Teams Code Numbers Information"):
-        col_club1, col_club2 = st.columns(2)
-        # Menampilkan setiap elemen list menggunakan st.markdown
-        with col_club1 : 
-            for item in list_items[:10]:
-                st.markdown(f"- {item}")
-        with col_club2 :
-            for item in list_items[10:]:
-                st.markdown(f"- {item}")
-        st.write("Ket : X -> Tidak bisa diprediksi (Tidak ada history data)")
+    # # Menampilkan expander di sidebar
+    # with st.expander("Home | Away Teams Code Numbers Information"):
+    #     col_club1, col_club2 = st.columns(2)
+    #     # Menampilkan setiap elemen list menggunakan st.markdown
+    #     with col_club1 : 
+    #         for item in list_items[:10]:
+    #             st.markdown(f"- {item}")
+    #     with col_club2 :
+    #         for item in list_items[10:]:
+    #             st.markdown(f"- {item}")
+    #     st.write("Ket : X -> Tidak bisa diprediksi (Tidak ada history data)")
                     
-    cols_home, cols_penengah, cols_away = st.columns([4,1,4])
+    # cols_home, cols_penengah, cols_away = st.columns([4,1,4])
 
-    no_team_options = [0,1,6,7,8,9,12,13,15,16,
-                       21,22,23,26,28,32,37,40,42]
+    # no_team_options = [0,1,6,7,8,9,12,13,15,16,
+    #                    21,22,23,26,28,32,37,40,42]
 
-    with cols_home:
-        home_team = st.selectbox('Home Team', options=no_team_options)
-        home_possesion = st.slider('Home Team Possesion',0, 100, value=0)
-        cols_home_1, cols_home_2 = st.columns(2)
-        with cols_home_1 : 
-            ht_home_score = st.text_input('Half Time Home Scored', value=0)
-            home_SoT = st.text_input('Home Shots on Target', value=0)
-            home_shots = st.text_input('Home Shots', value=0)
-            home_touches = st.text_input('Home Touches', value=0)
-            home_passes = st.text_input('Home Passes', value=0)
-            home_tackles = st.text_input('Home Tackles', value=0)
-        with cols_home_2 :
-            home_clearances = st.text_input('Home Clearances', value=0)
-            home_corners = st.text_input('Home Corners', value=0)
-            home_offsides = st.text_input('Home Offsides', value=0)
-            home_yellow_card = st.text_input('Home Yellow Card', value=0)
-            home_red_card = st.text_input('Home Red Card', value=0)
-            home_fouls = st.text_input('Home Fouls', value=0)
+    # with cols_home:
+    #     home_team = st.selectbox('Home Team', options=no_team_options)
+    #     home_possesion = st.slider('Home Team Possesion',0, 100, value=0)
+    #     cols_home_1, cols_home_2 = st.columns(2)
+    #     with cols_home_1 : 
+    #         ht_home_score = st.text_input('Half Time Home Scored', value=0)
+    #         home_SoT = st.text_input('Home Shots on Target', value=0)
+    #         home_shots = st.text_input('Home Shots', value=0)
+    #         home_touches = st.text_input('Home Touches', value=0)
+    #         home_passes = st.text_input('Home Passes', value=0)
+    #         home_tackles = st.text_input('Home Tackles', value=0)
+    #     with cols_home_2 :
+    #         home_clearances = st.text_input('Home Clearances', value=0)
+    #         home_corners = st.text_input('Home Corners', value=0)
+    #         home_offsides = st.text_input('Home Offsides', value=0)
+    #         home_yellow_card = st.text_input('Home Yellow Card', value=0)
+    #         home_red_card = st.text_input('Home Red Card', value=0)
+    #         home_fouls = st.text_input('Home Fouls', value=0)
 
-    with cols_away:
-        away_team = st.selectbox('Away Team', options=no_team_options)
-        away_possesion = st.slider('Away Team Possesion',0, 100, value=100-home_possesion)
-        cols_away_1, cols_away_2 = st.columns(2)
-        with cols_away_1 : 
-            ht_away_score = st.text_input('Half Time Away Scored', value=0)
-            awat_SoT = st.text_input('Away Shots on Target', value=0)
-            awat_shots = st.text_input('Away Shots', value=0)
-            away_touches = st.text_input('Away Touches', value=0)
-            away_passes = st.text_input('Away Passes', value=0)
-            away_tackles = st.text_input('Away Tackles', value=0)
-        with cols_away_2 : 
-            away_clearances = st.text_input('Away Clearances', value=0)
-            away_corners = st.text_input('Away Corners', value=0)
-            away_offsides = st.text_input('Away Offsides', value=0)
-            away_yellow_card = st.text_input('Away Yellow Card', value=0)
-            away_red_card = st.text_input('Away Red Card', value=0)
-            away_fouls = st.text_input('Away Fouls', value=0)
+    # with cols_away:
+    #     away_team = st.selectbox('Away Team', options=no_team_options)
+    #     away_possesion = st.slider('Away Team Possesion',0, 100, value=100-home_possesion)
+    #     cols_away_1, cols_away_2 = st.columns(2)
+    #     with cols_away_1 : 
+    #         ht_away_score = st.text_input('Half Time Away Scored', value=0)
+    #         awat_SoT = st.text_input('Away Shots on Target', value=0)
+    #         awat_shots = st.text_input('Away Shots', value=0)
+    #         away_touches = st.text_input('Away Touches', value=0)
+    #         away_passes = st.text_input('Away Passes', value=0)
+    #         away_tackles = st.text_input('Away Tackles', value=0)
+    #     with cols_away_2 : 
+    #         away_clearances = st.text_input('Away Clearances', value=0)
+    #         away_corners = st.text_input('Away Corners', value=0)
+    #         away_offsides = st.text_input('Away Offsides', value=0)
+    #         away_yellow_card = st.text_input('Away Yellow Card', value=0)
+    #         away_red_card = st.text_input('Away Red Card', value=0)
+    #         away_fouls = st.text_input('Away Fouls', value=0)
 
-    result_prediction = model.predict([[home_team, away_team, ht_home_score, ht_away_score,
-                                        home_possesion, away_possesion,
-                                        home_SoT, awat_SoT, home_shots, awat_shots, 
-                                        home_touches, away_touches, home_passes, away_passes,
-                                        home_tackles, away_tackles, home_clearances, away_clearances,
-                                        home_corners, away_corners, home_offsides, away_offsides,
-                                        home_yellow_card, away_yellow_card, home_red_card, away_red_card,
-                                        home_fouls, away_fouls
-                                        ]])
-    result_match = ''
+    # result_prediction = model.predict([[home_team, away_team, ht_home_score, ht_away_score,
+    #                                     home_possesion, away_possesion,
+    #                                     home_SoT, awat_SoT, home_shots, awat_shots, 
+    #                                     home_touches, away_touches, home_passes, away_passes,
+    #                                     home_tackles, away_tackles, home_clearances, away_clearances,
+    #                                     home_corners, away_corners, home_offsides, away_offsides,
+    #                                     home_yellow_card, away_yellow_card, home_red_card, away_red_card,
+    #                                     home_fouls, away_fouls
+    #                                     ]])
+    # result_match = ''
     
-    if st.button('PREDICT', use_container_width=True) : 
-        if(result_prediction[0] == 'W') : result_match = 'Home Team Will Win' 
-        elif(result_prediction[0] == 'L') : result_match = 'Home Team Will Lost' 
-        elif(result_prediction[0] == 'D') : result_match = 'Home Team Will Draw' 
-        st.success(result_match)
+    # if st.button('PREDICT', use_container_width=True) : 
+    #     if(result_prediction[0] == 'W') : result_match = 'Home Team Will Win' 
+    #     elif(result_prediction[0] == 'L') : result_match = 'Home Team Will Lost' 
+    #     elif(result_prediction[0] == 'D') : result_match = 'Home Team Will Draw' 
+    #     st.success(result_match)
     
