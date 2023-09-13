@@ -417,9 +417,9 @@ with tab3 :
 
     
 with tab4 :         
-    path = "model.joblib"
-    pickle_in = open(path, "rb")
-    model = pickle.load(pickle_in)
+    # path = "model.joblib"
+    # pickle_in = open(path, "rb")
+    model = joblib.load("model.joblib")
     
     st.header('Predicting Premier League Match Result')
     
