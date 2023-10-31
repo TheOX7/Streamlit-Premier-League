@@ -8,7 +8,6 @@ import math
 import csv
 import joblib
 from PIL import Image
-from lorem_text import lorem
 import os
 
 st.set_page_config(
@@ -24,7 +23,6 @@ tab1, tab2, tab3, tab4 = st.tabs(['Summary Information', 'Player Stats', 'Club S
 
 # Tab Pertama
 with tab1 : 
-    opening = lorem.paragraphs(2)
     opening_1 = "Musim Premier League 2022/2023 sudah berakhir dan telah memberikan beberapa hal-hal yang tidak terduga. Salah satu momen atau hal yang tidak terduga adalah ketika Arsenal mampu memberikan persaingan yang sengit kepada Manchester City dalam perebutan gelar juara Liga Inggris. Dimana Arsenal berhasil menduduki puncak klasemen Liga Inggris selama 29 pekan. Namun, Arsenal gagal dalam menjaga kekonsistenannya hingga akhir musim, beberapa alasannya seperti adanya cedera pada beberapa pemain kunci, dan kekonsistenan performa Manchester City ketika performa Arsenal sedang tidak konsisten. Pada akhirnya, Manchester City berhasil menduduki posisi pertama sampai dengan gamewwk terakhir. Tak hanya itu, kejutan lainnya datang dari tim yang ditangani oleh Eddie Howe, yaitu Newcastle United. Terakhir kali Newcastle berhasil masuk ke dalam top four adalah pada musim 2003/2024,  dimana pada saat itu Newcastle dipimpin oleh Alan Shearer sebagai captain tim tersebut, pada akhirnya Newcastle berhasil menduduki posisi keempat. Selain itu, Manchester United juga berhasil memastikan diri mereka mendapatkan tiket untuk bermain pada Liga Champions."
     opening_2_1 = "Selain Manchester City, Arsenal, Manchester City, dan Newcastle City yang berhasil mendapatkan jatah bermain pada Champions League untuk musim depan. Terdapat empat tim lainnya lagi yang berhasil mendapatkan jatah untuk bermain diluar Premier League. Pada posisi kelima dan keenam ditempati oleh Liverpool dan Brighton & Hove Albion, dimana kedua tim ini berhasil mendapatkan jatah untuk bermain di Europa League. Selain itu pada posisi ketujuh ditempati oleh Aston Villa, dimana Aston Villa dapat bermain pada Conference League untuk musim depan. Tim terakhir yang ‘surprisingly’ berhasil mendapatkan jatah bermain pada Europa League adalah West Ham. West Ham dapat bermain pada Europa League dikarenakan mereka berhasil menjuarai Conference League, setelah mengalahkan Fiorentina dengan skor 2-1."    
     opening_2_2 = "Selain ke-delapan tim tersebut yang berhasil bermain pada liga Eropa, terdapat dua tim yang kurang bermain baik pada musim ini, yaitu Tottenham dan Chelsea. Tottenham sendiri pada awal-awal musim konsisten berada dalam top four. Sedangkan Chelsea sendiri sudah menggelontorkan dana yang banyak, namun performa mereka kurang baik, salah satunya dikarenakan jumlah pemain yang terlalu banyak dan membuat tidak adanya line-up yang pasti bagi tim ini."
