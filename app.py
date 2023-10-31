@@ -415,7 +415,7 @@ with tab3 :
 
     
 with tab4 :         
-    model = joblib.load("model_pl.joblib")
+    model = joblib.load("model.joblib")
     
     st.header('Predicting Premier League Match Result')
     
